@@ -1,0 +1,176 @@
+body {
+    background-image: url('https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=800'); /* Background image */
+    background-image opacity: 0.5
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+    color: #333;
+}
+
+.container {
+    width: 90%; /* Increase the width of the container */
+    max-width: 800px; /* Adjust maximum width */
+    margin: 0 auto;
+}
+
+.chat-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 8px;
+    padding: 30px; /* Increased padding for a larger feel */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: scale(0.8); /* Start smaller */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Return to original size */
+    }
+}
+
+.chat-title {
+    text-align: center;
+    color: #000000;
+    font-size: 4em; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    font-family: 'Brush Script MT', Cursive; /* Use Google Font */
+    margin-bottom: 5px; /* Space below the title */
+    animation: fadeInScale 1s ease-out; /* Apply fade-in and scale animation */
+    background: linear-gradient(45deg, #ffcccb, #add8e6); /* Color gradient background */
+    -webkit-background-clip: text; /* Clip background to text */
+     /* Make text color transparent for gradient */
+}
+
+.chatbox {
+    height: 600px; /* Increased height of the chatbox */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px; /* More padding for better spacing */
+    margin-bottom: 15px;
+    background-color: #f0f8ff; /* Light blue */
+}
+
+.input-box {
+    width: calc(100% - 30px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.meal-options {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0; /* Increased margin for better spacing */
+}
+
+.meal-button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 15px; /* Increased padding for buttons */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    color: #fff; /* White text color */
+    transition: background-color 0.3s ease;
+}
+
+.meal-button:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+}
+
+.meal-button[data-meal="breakfast"] {
+    background-color: #ffcccb; /* Light pink */
+}
+
+.meal-button[data-meal="lunch"] {
+    background-color: #98fb98; /* Light green */
+}
+
+.meal-button[data-meal="dinner"] {
+    background-color: #add8e6; /* Light blue */
+}
+
+.send-button {
+    width: 100%;
+    padding: 15px; /* Increased padding for the send button */
+    background-color: #6c757d; /* Grey button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+}
+
+.recipe-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px 0; /* Increased margin for recipe cards */
+    background-color: #ffffff; /* White background for recipes */
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.dropdown-container {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.cuisine-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ffcccb, #add8e6, #98fb98); /* Colorful gradient */
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+    appearance: none;
+}
+
+.cuisine-dropdown:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hover effect */
+    transform: scale(1.05); /* Scale up */
+}
+
+.cuisine-dropdown:focus {
+    border-color: #6c757d; /* Darker border on focus */
+}
+
+
+@keyframes dropdownFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cuisine-dropdown {
+    animation: dropdownFadeIn 0.5s ease-out;
+}
+
