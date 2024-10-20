@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Pasta",
+    "ingredients": ["pasta", "tomato", "garlic"],
+    "instructions": "Boil pasta, add tomato and garlic sauce, cook for 10 minutes."
+  },
+  {
+    "name": "Omelette",
+    "ingredients": ["eggs", "onion", "salt"],
+    "instructions": "Beat eggs, add chopped onion and salt, cook on a pan."
+  }
+]
